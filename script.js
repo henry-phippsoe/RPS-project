@@ -13,13 +13,27 @@ function getHumanChoice() {
     return choice;
 }
 
-function playRound() {
+function playRound(humanChoice, computerChoice) {
+    humanChoice = humanChoice.toLowerCase();
     
+    switch (computerChoice) {
+        case 1:
+            console.log("rock");
+            break;
+        case 2:
+            console.log("rocks");
+            break;
+        case 3:
+            console.log("rockzzz");
+            break;
+        default:
+            throw new Error("Invalid computerChoice value: " + computerChoice);
+
+    }
 }
 
 function playGame() {
 
 }
 
-getComputerChoice();
-getHumanChoice();
+playRound(getHumanChoice(), getComputerChoice());

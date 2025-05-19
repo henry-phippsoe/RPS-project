@@ -3,7 +3,7 @@ let computerScore = 0;
 
 function getComputerChoice() {
     let choice = Math.floor(Math.random() * 3) + 1;
-    
+
     switch (choice) {
         case 1:
             choice = "rock";
@@ -28,8 +28,11 @@ function getHumanChoice() {
 function playRound(humanChoice, computerChoice) {
     humanChoice = humanChoice.toLowerCase();
 
+    console.log("You chose: " + humanChoice);
+    console.log("Computer chose: " + computerChoice);
+
     switch (computerChoice) {
-        case 1:
+        case "rock":
             switch (humanChoice) {
                 case "paper": console.log("You win! Paper beats rock.");
                     humanScore += 1;
@@ -42,7 +45,7 @@ function playRound(humanChoice, computerChoice) {
                 default: throw new Error("Invalid humanChoice value: " + humanChoice);
             }
             break;
-        case 2:
+        case "paper":
             switch (humanChoice) {
                 case "paper": console.log("Tie! No points awarded.");
                     break;
@@ -55,7 +58,7 @@ function playRound(humanChoice, computerChoice) {
                 default: throw new Error("Invalid humanChoice value: " + humanChoice);
             }
             break;
-        case 3:
+        case "scissors":
             switch (humanChoice) {
                 case "paper": console.log("You lose! Scissors beats paper.");
                     humanScore += 1;

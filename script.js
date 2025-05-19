@@ -18,13 +18,21 @@ function playRound(humanChoice, computerChoice) {
     
     switch (computerChoice) {
         case 1:
-            console.log("rock");
+            switch (humanChoice) {
+                case "paper": console.log("You win! Paper beats rock.");
+                    break;
+                case "scissors": console.log("You lose! Rock beats scissors.");
+                    break;
+                case "rock": console.log("Tie! No points awarded.");
+                    break;
+                default: throw new Error("Invalid humanChoice value: " + humanChoice);
+            }
             break;
         case 2:
-            console.log("rocks");
+            console.log("paper");
             break;
         case 3:
-            console.log("rockzzz");
+            console.log("scissors");
             break;
         default:
             throw new Error("Invalid computerChoice value: " + computerChoice);

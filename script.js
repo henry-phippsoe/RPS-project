@@ -15,7 +15,7 @@ function getComputerChoice() {
             choice = "scissors";
             break;
         default:
-            throw new Error("Invalid computerChoice value: " + computerChoice);
+            throw new Error("Invalid computerChoice value: " + choice);
     }
     return choice;
 }

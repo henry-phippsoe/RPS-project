@@ -1,6 +1,7 @@
 let humanScore = 0;
 let computerScore = 0;
 
+// Gets random value from 1-3 in correspondence to signs, returns played sign
 function getComputerChoice() {
     let choice = Math.floor(Math.random() * 3) + 1;
 
@@ -20,11 +21,13 @@ function getComputerChoice() {
     return choice;
 }
 
+// Takes user input for sign, returns played sign
 function getHumanChoice() {
     let choice = prompt("Choose to throw rock, paper, or scissors: ");
     return choice;
 }
 
+// Rock paper scissors game logic for one round, for each computer sign, check against human sign to decide victor
 function playRound(humanChoice, computerChoice) {
     humanChoice = humanChoice.toLowerCase();
 
@@ -75,6 +78,7 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
+// Rock paper scissors logic for a 5 round game, displays victory message and resets scoreboard
 function playGame() {
     for (i = 0; i < 5; i++) {
         playRound(getHumanChoice(), getComputerChoice());

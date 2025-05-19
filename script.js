@@ -61,12 +61,12 @@ function playRound(humanChoice, computerChoice) {
         case "scissors":
             switch (humanChoice) {
                 case "paper": console.log("You lose! Scissors beats paper.");
-                    humanScore += 1;
-                    break;
-                case "scissors": console.log("Tie! No points awarded.");
                     computerScore += 1;
                     break;
+                case "scissors": console.log("Tie! No points awarded.");
+                    break;
                 case "rock": console.log("You win! Rock beats scissors.");
+                    humanScore += 1;
                     break;
                 default: throw new Error("Invalid humanChoice value: " + humanChoice);
             }
@@ -76,7 +76,19 @@ function playRound(humanChoice, computerChoice) {
 }
 
 function playGame() {
+    for (i = 0; i < 5; i++) {
+        playRound(getHumanChoice(), getComputerChoice());
+    }
+    if (humanScore > computerScore) {
+        console.log("You win!")
+    }
+    else {
+        console.log("You lose!")
+    }
 
+    console.log("You: " + humanScore + " Computer: " + computerScore);
+    humanScore = 0;
+    computerScore = 0;
 }
 
-playRound(getHumanChoice(), getComputerChoice());
+playGame();

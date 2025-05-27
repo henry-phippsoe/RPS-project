@@ -1,3 +1,25 @@
 body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     background-color: bisque;
+}
+
+#terminal {
+    background-color: black;
+    color: lime;
+    height: 600px;
+    width: 500px;
+}
+
+#buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#buttons button {
+    margin: 10px 50px;
 }

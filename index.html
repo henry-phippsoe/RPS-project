@@ -7,11 +7,14 @@
     <title>RPSproject</title>
 </head>
 <body>
-    <button onclick="getHumanChoice('rock')"></button>
-    <button onclick="getHumanChoice('paper')"></button>
-    <button onclick="getHumanChoice('scissors')"></button>
+    <div id="terminal"></div>
 
-    
+    <div id="buttons">
+        <button onclick="playRound('rock', getComputerChoice())">ROCK</button>
+        <button onclick="playRound('paper', getComputerChoice())">PAPER</button>
+        <button onclick="playRound('scissors', getComputerChoice())">SCISSORS</button>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

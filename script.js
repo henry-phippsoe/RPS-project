@@ -1,6 +1,8 @@
 let humanScore = 0;
 let computerScore = 0;
 
+const terminal = document.getElementById("terminal");
+
 // Gets random value from 1-3 in correspondence to signs, returns played sign
 function getComputerChoice() {
     let choice = Math.floor(Math.random() * 3) + 1;
@@ -22,11 +24,13 @@ function getComputerChoice() {
 }
 
 // Takes user input for sign, returns played sign
-function getHumanChoice(choice) {
-    
-}
+// function getHumanChoice(choice) {
+//     // let choice = prompt("Choose to throw rock, paper, or scissors: ");
+//     // return choice;
+// }
 
 // Rock paper scissors game logic for one round, for each computer sign, check against human sign to decide victor
+
 function playRound(humanChoice, computerChoice) {
     humanChoice = humanChoice.toLowerCase();
 

@@ -22,9 +22,8 @@ function getComputerChoice() {
 }
 
 // Takes user input for sign, returns played sign
-function getHumanChoice() {
-    let choice = prompt("Choose to throw rock, paper, or scissors: ");
-    return choice;
+function getHumanChoice(choice) {
+    
 }
 
 // Rock paper scissors game logic for one round, for each computer sign, check against human sign to decide victor
@@ -79,20 +78,20 @@ function playRound(humanChoice, computerChoice) {
 }
 
 // Rock paper scissors logic for a 5 round game, displays victory message and resets scoreboard
-function playGame() {
-    for (i = 0; i < 5; i++) {
-        playRound(getHumanChoice(), getComputerChoice());
-    }
-    if (humanScore > computerScore) {
-        console.log("You win!")
-    }
-    else {
-        console.log("You lose!")
-    }
+// function playGame() {
+//     for (i = 0; i < 5; i++) {
+//         playRound(getHumanChoice(), getComputerChoice());
+//     }
+//     if (humanScore > computerScore) {
+//         console.log("You win!")
+//     }
+//     else {
+//         console.log("You lose!")
+//     }
 
-    console.log("You: " + humanScore + " Computer: " + computerScore);
-    humanScore = 0;
-    computerScore = 0;
-}
+//     console.log("You: " + humanScore + " Computer: " + computerScore);
+//     humanScore = 0;
+//     computerScore = 0;
+// }
 
-playGame();
+// playGame();

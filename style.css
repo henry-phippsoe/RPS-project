@@ -11,6 +11,8 @@ body {
 }
 
 #terminal {
+    display: flex;
+    flex-direction: column;
     background-color: black;
     color: lime;
     height: 600px;

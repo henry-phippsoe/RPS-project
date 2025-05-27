@@ -34,31 +34,31 @@ function getComputerChoice() {
 function playRound(humanChoice, computerChoice) {
     humanChoice = humanChoice.toLowerCase();
 
-    console.log("You chose: " + humanChoice);
-    console.log("Computer chose: " + computerChoice);
+    terminal.appendChild(document.createTextNode("You chose: " + humanChoice));
+    terminal.appendChild(document.createTextNode("Computer chose: " + computerChoice));
 
     switch (computerChoice) {
         case "rock":
             switch (humanChoice) {
-                case "paper": console.log("You win! Paper beats rock.");
+                case "paper": terminal.appendChild(document.createTextNode("You win! Paper beats rock."));
                     humanScore += 1;
                     break;
-                case "scissors": console.log("You lose! Rock beats scissors.");
+                case "scissors": terminal.appendChild(document.createTextNode("You lose! Rock beats scissors."));
                     computerScore += 1;
                     break;
-                case "rock": console.log("Tie! No points awarded.");
+                case "rock": terminal.appendChild(document.createTextNode("Tie! No points awarded."));
                     break;
                 default: throw new Error("Invalid humanChoice value: " + humanChoice);
             }
             break;
         case "paper":
             switch (humanChoice) {
-                case "paper": console.log("Tie! No points awarded.");
+                case "paper": terminal.appendChild(document.createTextNode("Tie! No points awarded."));
                     break;
-                case "scissors": console.log("You win! Scissors beats paper.");
+                case "scissors": terminal.appendChild(document.createTextNode("You win! Scissors beats paper."));
                     humanScore += 1;
                     break;
-                case "rock": console.log("You lose! Paper beats rock.");
+                case "rock": terminal.appendChild(document.createTextNode("You lose! Paper beats rock."));
                     computerScore += 1;
                     break;
                 default: throw new Error("Invalid humanChoice value: " + humanChoice);
@@ -66,12 +66,12 @@ function playRound(humanChoice, computerChoice) {
             break;
         case "scissors":
             switch (humanChoice) {
-                case "paper": console.log("You lose! Scissors beats paper.");
+                case "paper": terminal.appendChild(document.createTextNode("You lose! Scissors beats paper."));
                     computerScore += 1;
                     break;
-                case "scissors": console.log("Tie! No points awarded.");
+                case "scissors": terminal.appendChild(document.createTextNode("Tie! No points awarded."));
                     break;
-                case "rock": console.log("You win! Rock beats scissors.");
+                case "rock": terminal.appendChild(document.createTextNode("You win! Rock beats scissors."));
                     humanScore += 1;
                     break;
                 default: throw new Error("Invalid humanChoice value: " + humanChoice);

@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>RPSproject</title>
 </head>
 <body>
+    <div id="terminal"></div>
+
+    <div id="buttons">
+        <button onclick="playRound('rock', getComputerChoice())">ROCK</button>
+        <button onclick="playRound('paper', getComputerChoice())">PAPER</button>
+        <button onclick="playRound('scissors', getComputerChoice())">SCISSORS</button>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

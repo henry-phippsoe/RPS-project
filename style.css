@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: bisque;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#terminal {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: lime;
+    height: 600px;
+    width: 500px;
+    overflow-y: scroll;
+    padding: 1rem;
+}
+
+#buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#buttons button {
+    margin: 10px 50px;
+}

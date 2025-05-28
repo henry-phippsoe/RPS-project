@@ -93,6 +93,21 @@ function playRound(humanChoice, computerChoice) {
     terminal.appendChild(document.createTextNode(`Score, H: ${humanScore} C: ${computerScore}`));
     terminal.appendChild(document.createElement("br"));
     terminal.appendChild(document.createElement("br"));
+
+    if (humanScore == 5) {
+        terminal.appendChild(document.createTextNode(`YOU WIN!!! ${humanScore}-${computerScore}`));
+        humanScore = 0;
+        computerScore = 0;
+        terminal.appendChild(document.createElement("br"));
+        terminal.appendChild(document.createElement("br"));
+    }
+    else if (computerScore == 5) {
+        terminal.appendChild(document.createTextNode(`YOU LOSE... ${humanScore}-${computerScore}`));
+        humanScore = 0;
+        computerScore = 0;
+        terminal.appendChild(document.createElement("br"));
+        terminal.appendChild(document.createElement("br"));
+    }
     
 }
 

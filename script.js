@@ -35,18 +35,23 @@ function playRound(humanChoice, computerChoice) {
     humanChoice = humanChoice.toLowerCase();
 
     terminal.appendChild(document.createTextNode("You chose: " + humanChoice));
+    terminal.appendChild(document.createElement("br"));
     terminal.appendChild(document.createTextNode("Computer chose: " + computerChoice));
+    terminal.appendChild(document.createElement("br"));
 
     switch (computerChoice) {
         case "rock":
             switch (humanChoice) {
                 case "paper": terminal.appendChild(document.createTextNode("You win! Paper beats rock."));
+                    terminal.appendChild(document.createElement("br"));
                     humanScore += 1;
                     break;
                 case "scissors": terminal.appendChild(document.createTextNode("You lose! Rock beats scissors."));
+                    terminal.appendChild(document.createElement("br"));
                     computerScore += 1;
                     break;
                 case "rock": terminal.appendChild(document.createTextNode("Tie! No points awarded."));
+                    terminal.appendChild(document.createElement("br"));
                     break;
                 default: throw new Error("Invalid humanChoice value: " + humanChoice);
             }
@@ -54,11 +59,14 @@ function playRound(humanChoice, computerChoice) {
         case "paper":
             switch (humanChoice) {
                 case "paper": terminal.appendChild(document.createTextNode("Tie! No points awarded."));
+                    terminal.appendChild(document.createElement("br"));
                     break;
                 case "scissors": terminal.appendChild(document.createTextNode("You win! Scissors beats paper."));
+                    terminal.appendChild(document.createElement("br"));
                     humanScore += 1;
                     break;
                 case "rock": terminal.appendChild(document.createTextNode("You lose! Paper beats rock."));
+                    terminal.appendChild(document.createElement("br"));
                     computerScore += 1;
                     break;
                 default: throw new Error("Invalid humanChoice value: " + humanChoice);
@@ -67,11 +75,14 @@ function playRound(humanChoice, computerChoice) {
         case "scissors":
             switch (humanChoice) {
                 case "paper": terminal.appendChild(document.createTextNode("You lose! Scissors beats paper."));
+                    terminal.appendChild(document.createElement("br"));
                     computerScore += 1;
                     break;
                 case "scissors": terminal.appendChild(document.createTextNode("Tie! No points awarded."));
+                    terminal.appendChild(document.createElement("br"));
                     break;
                 case "rock": terminal.appendChild(document.createTextNode("You win! Rock beats scissors."));
+                    terminal.appendChild(document.createElement("br"));
                     humanScore += 1;
                     break;
                 default: throw new Error("Invalid humanChoice value: " + humanChoice);
@@ -79,6 +90,10 @@ function playRound(humanChoice, computerChoice) {
             break;
         default: throw new Error("Invalid computerChoice value: " + computerChoice);
     }
+    terminal.appendChild(document.createTextNode(`Score, H: ${humanScore} C: ${computerScore}`));
+    terminal.appendChild(document.createElement("br"));
+    terminal.appendChild(document.createElement("br"));
+    
 }
 
 // Rock paper scissors logic for a 5 round game, displays victory message and resets scoreboard

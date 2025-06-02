@@ -18,12 +18,16 @@ function getComputerChoice() {
         default:
             throw new Error("Invalid computerChoice value: " + choice);
     }
+    // console.log(choice);
+    // TESTER
     return choice;
 }
 
 // Takes user input for sign, returns played sign
 function getHumanChoice() {
     let choice = prompt("Choose to throw rock, paper, or scissors: ");
+    // console.log(choice);
+    // TESTER
     return choice;
 }
 
@@ -33,6 +37,10 @@ function playRound(humanChoice, computerChoice) {
 
     console.log("You chose: " + humanChoice);
     console.log("Computer chose: " + computerChoice);
+
+    // console.log(humanScore);
+    // console.log(computerScore);
+    // TESTER
 
     switch (computerChoice) {
         case "rock":
